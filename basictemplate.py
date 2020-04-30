@@ -1,20 +1,20 @@
 import clr
-clr.AddRreference('ProtoGeomotry')
+clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
 
 #Import Revit Nodes
-clr.AddRreference("RevitNodes")
+clr.AddReference("RevitNodes")
 import Revit
 
 #Import Revit elements
 from Revit.Elements import *
 
 #Import Document Manager
-clr.AddRreference("RevitServices")
+clr.AddReference("RevitServices")
 import RevitServices
-from RevitServices.Persistaence import DocumentManager
+from RevitServices.Persistence import DocumentManager
 
-Import System
+import System
 
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
@@ -22,4 +22,3 @@ app = uiapp.Application
 
 #Assign your output to the OUT variable
 OUT=[doc,uiapp,app]
-
